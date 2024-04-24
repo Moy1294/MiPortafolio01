@@ -1,132 +1,139 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
-:root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
-}
-
+/* Estilos generales */
 body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1;
 }
-ol, ul,li {
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 100px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
     list-style: none;
+    display: flex;
 }
-a{
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
     text-decoration: none;
-    color: var(--cor-de-link);
+    color: #333;
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
-/*Sección Menu*/
-
-section.menu{
-
+/* Estilos de las secciones */
+section {
+    margin-bottom: 40px;
 }
 
-/*Sección Title*/
-
-section.title{
-
+section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-/*Sección About*/
-
-section.about{
-
+section img {
+    max-width: 100%;
 }
 
-/*Sección Hobbies*/
-
-section.hobbies{
-    
+section ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Experiencia Académica*/
-
-section.academic{
-
+section ul li {
+    margin-bottom: 10px;
 }
 
-/* experiencia*/
-
-section.experience{
-
+/* Estilos de Skills */
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/*Contacto*/
-
-section.formcontato{
-
+#skills ul li {
+    flex-basis: 33.33%;
+    text-align: center;
 }
 
-/*footeer*/
-
-section.footer{
-   
+/* Estilos de Hobbies */
+#hobbies ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
+#hobbies ul li {
+    flex-basis: 33.33%;
+    text-align: center;
 }
 
-/*Mobile*/
-@media (min-width: 425px) {
+/* Estilos de Formación Académica */
+#formacion div {
+    margin-bottom: 20px;
+}
 
-/*Menu*/
+/* Estilos de Experiencia Profesional */
+#proyectos div {
+    margin-bottom: 20px;
+}
 
-/*Titulo*/
+#proyectos a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
 
-/*Sección sobre mi*/
+/* Estilos de Contacto */
+#contacto form {
+    max-width: 400px;
+    margin-top: 20px;
+}
 
-/*Skills*/
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
-/*Hobbies*/
- 
-/*Formación Académica*/
+#contacto button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
-/*Experiencia Profesional*/
+/* Estilos del pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
 
- /*Contacto*/
-
-/*Footer*/
-
+.nav-link.active {
+    border: 2px solid red;
 }
